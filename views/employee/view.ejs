@@ -1,0 +1,79 @@
+<div class="d-flex justify-content-between flex wrap flex-md nowrap align-items-center pt-3 pt-2 mb-3      border-bottom">
+    <h1 class="h2"><%= employee.Name %></h1>
+
+    <div class="btn-toorbar mb-2 mb-nd 0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="col py-3">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><%= employee.Name %></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col text-end fw-lighter">
+            <b>Last Updated <%= new Date(employee.UpdatedAt).toUTCString() %> </b>
+            <b>UserId:</b> <%= employee._id %>
+        </div>
+    </div>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Name:</b></div>
+            <div class="col"><%= employee.Name %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Email:</b></div>
+            <div class="col"><%= employee.Email %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Telephone:</b></div>
+            <div class="col"><%= employee.Telephone %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Department:</b></div>
+            <div class="col"><%= employee.Department %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Salary:</b></div>
+            <div class="col"><%= employee.Salary %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Date Created:</b></div>
+            <div class="col"><%= employee.createdAt %></div>
+        </div>
+    </li>
+
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col" style="max-width: 140px;"> <b>Date Modified:</b></div>
+            <div class="col"><%= employee.updatedAt %></div>
+        </div>
+    </li>
+</ul>
